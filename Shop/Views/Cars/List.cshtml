@@ -1,0 +1,16 @@
+﻿@model CarsListViewModel
+<h2>@Model.currentCategory</h2>
+<div>
+    @{ foreach (Cars car in Model.getAllCars)
+
+        {
+            @await Html.PartialAsync("AllCars", car);
+            /*<div>
+                <h2> Модель: @car.name </h2>
+                <p> Цена: @car.price.ToString("c")</p>
+                <a class="btn" asp-controller="ShopCars" asp-action="AddToCart" asp-route-id="@car.myid">Добавить в корзину</a>
+            </div>
+            */
+        }
+    }
+</div>

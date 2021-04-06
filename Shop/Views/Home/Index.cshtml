@@ -1,0 +1,11 @@
+﻿@model HomeViewModels
+<h2>Лучшие авто</h2>
+<div>
+    @{ foreach (Cars car in Model.favCars)
+
+        {
+            @await Html.PartialAsync("AllCars", car);
+        }
+    }
+</div>
+
